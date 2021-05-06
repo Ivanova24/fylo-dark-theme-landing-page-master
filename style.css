@@ -1,0 +1,263 @@
+/* ********** Custom Properties ********** */
+:root {
+  --color-introBg: hsl(217, 28%, 15%);
+  --color-mainBg: hsl(218, 28%, 13%);
+  --color-footerBg: hsl(216, 53%, 9%);
+  --color-testimonialBg: hsl(219, 30%, 18%);
+  --color-cta-primary: hsl(176, 68%, 64%);
+  --color-cta-secondary: hsl(198, 60%, 50%);
+  --color-cta-error: hsl(0, 100%, 63%);
+  --color-white: #fff;
+  --font-title: "Raleway", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --wrapper-small: 1.5625rem clamp(1.25rem, 4.4vw, 3rem) 6.25rem;
+  --wrapper:  4.5625rem clamp(1.25rem, 4.4vw, 3rem) 5.4375rem;
+}
+
+/* ********** Reset ********** */
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-white);
+  transition: all 0.5s ease-out;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* ********** Utilities ********** */
+header,
+.hero-container,
+.features, 
+.productive {
+    padding: var(--wrapper-small);
+}
+
+.main-bg {
+  background-color: var(--color-mainBg);
+}
+
+/* Section header */
+header {
+  background-color: var(--color-introBg);
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) repeat(3, auto);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.nav-container a {
+  font-size: clamp(0.875rem, 1.2vw, 1.5rem);
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  text-decoration: underline;
+}
+
+.nav-img {
+    width: 83px;
+  }
+/* End of header */
+
+/* Section hero */
+.hero {
+    position: relative; 
+    background-color: var(--color-introBg);
+}
+
+.hero:after {
+    content: ""; 
+    position: absolute; 
+    z-index: 0;
+    width: 100%;
+    height: 40vw;
+    bottom: 0px;
+    background-image: url(images/bg-curvy-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.hero-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+}
+
+.hero-container > * {
+    position: relative; 
+    z-index: 1; 
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 716px;
+}
+
+.hero-container h1 {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, calc(1.5rem + 1vw), 2.625rem);
+    max-width: 700px;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
+.hero-container p {
+    max-width: 585px;
+    font-size: clamp(0.77rem, calc(0.77rem + 1vw), 1.2rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-container .btn {
+    padding: 15px 20px;
+    max-width: 273.2px;
+    width: 100%;
+    color: var(--color-white); 
+    border: none;
+    background-image: linear-gradient(to right, var(--color-cta-primary), var(--color-cta-secondary));
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hero-container .btn:hover {
+  background: linear-gradient(to right, var(--color-cta-secondary), var(--color-cta-primary));
+}
+/* End of hero */
+
+/* Section features */
+.features {
+  display: grid; 
+  grid-template-columns: 1fr;
+  gap: 10vw 10vw; 
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 80px;
+}
+
+.feature-img img {
+  height: 100%;
+}
+
+.feature h3 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.feature p {
+  font-size: 1rem; 
+}
+/* End of features */
+
+/* Section productive */
+
+
+
+
+@media screen and (min-width: 699px) {
+    .hero:after{
+        background-image: url(images/bg-curvy-desktop.svg);
+    }
+
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 999px) {
+    header,
+    .hero-container,
+    .features,
+    .productive {
+      padding: var(--wrapper); 
+    }
+  
+    .nav-container {
+      grid-gap: 56px;
+    }
+
+    .nav-img {
+        width: 185px;
+      }
+
+    .features {
+      gap: 7vw 7vw
+    }
+  
+  }
+
+
