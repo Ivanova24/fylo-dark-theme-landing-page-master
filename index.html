@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <nav class="nav-container">
       <div class="nav-img">
         <img src="images/logo.svg" alt="logo Fylo">
@@ -27,7 +27,7 @@
   </header>
   
   <section class="hero">
-    <div class="hero-container">
+    <div class="hero-container container">
       <div class="hero-img">
       <img src="images/illustration-intro.png" alt="">
     </div>
@@ -42,7 +42,7 @@
   </section>
 
   <main class="main-bg">
-  <section class="features">
+  <section class="features container auto">
       <div class="feature">
         <div class="feature-img">
           <img src="images/icon-access-anywhere.svg" alt="Access anywhere">
@@ -73,10 +73,8 @@
         <p>  Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
       </div>
   </section>
-  <section class="productive">
-    <div class="productive-img">
+  <section class="productive container auto">
       <img src="images/illustration-stay-productive.png" alt="Stay productive">
-    </div>
     <div class="productive-text">
       <h2>Stay productive, wherever you are</h2>
       <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
@@ -85,32 +83,55 @@
       <a href="#">See how Fylo works</a>
     </div>
   </section>
+  <section class="quotes container auto">
+    <div class="quote">
+      <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="quote-autor">
+        <div class="quote-img">
+            <img src="/images/profile-1.jpg" alt="Satish Patel">
+        </div>
+        <div class="quote-name">
+          <h4>Satish Patel</h4>
+          <small>Founder & CEO, Huddle</small>
+        </div>
+      </div>
+    </div>
+    <div class="quote">
+      <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="quote-autor">
+        <div class="quote-img">
+            <img src="/images/profile-2.jpg" alt="Bruce McKenzie">
+        </div>
+        <div class="quote-name">
+          <h4>Bruce McKenzie</h4>
+          <small>Founder & CEO, Huddle</small>
+        </div>
+      </div>
+    </div>
+    <div class="quote">
+      <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="quote-autor">
+        <div class="quote-img">
+            <img src="/images/profile-3.jpg" alt="Iva Boyd">
+        </div>
+        <div class="quote-name">
+          <h4>Iva Boyd</h4>
+          <small>Founder & CEO, Huddle</small>
+        </div>
+      </div>
+    </div>
+    
+  </section>
 </main>
 
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Satish Patel
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Bruce McKenzie
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Iva Boyd
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
-  questions, our support team would be happy to help you.
-
-  Get Started For Free
+<section class="signup">
+  <h3> Get early access today</h3>
+  <p> It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+  <form>
+    <input type="email" name="email" id="email" placeholder="email@example.com">
+    <button type="submit">Get Started For Free</button>
+  </form>
+</section>
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
   dolore magna aliqua
